@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="记录、分享">
@@ -162,6 +162,244 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/27/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/27/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">js数组方法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-27 15:36:29" itemprop="dateCreated datePublished" datetime="2021-08-27T15:36:29+08:00">2021-08-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-09 20:35:20" itemprop="dateModified" datetime="2021-10-09T20:35:20+08:00">2021-10-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">js复习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数组常用方法"><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h1><h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加一个元素到数组的最后位置</span></span><br><span class="line"><span class="comment">// 方式一:</span></span><br><span class="line"><span class="keyword">var</span> numbers = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">numbers[numbers.length] = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式二:</span></span><br><span class="line">numbers.push(<span class="number">11</span>)</span><br><span class="line">numbers.push(<span class="number">12</span>, <span class="number">13</span>)</span><br><span class="line"></span><br><span class="line">alert(numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加一个元素到数组首位</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = numbers.length; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">    numbers[i] = numbers[i-<span class="number">1</span>]</span><br><span class="line">&#125;</span><br><span class="line">numbers[<span class="number">0</span>] = -<span class="number">1</span></span><br><span class="line">alert(numbers) <span class="comment">// -1,0,1,2,3,4,5,6,7,8,9,10,11,12,13</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过unshift在首位插入数据</span></span><br><span class="line">numbers.unshift(-<span class="number">2</span>)</span><br><span class="line">numbers.unshift(-<span class="number">4</span>, -<span class="number">3</span>)</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除最后的元素</span></span><br><span class="line">numbers.pop()</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除首位的元素</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; numbers.length; i++) &#123;</span><br><span class="line">    numbers[i] = numbers[i+<span class="number">1</span>]</span><br><span class="line">&#125;</span><br><span class="line">numbers.pop()</span><br><span class="line">alert(numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment">//shift方法</span></span><br><span class="line">numbers.shift()</span><br><span class="line">alert(numbers)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="添加或者删除指定位置的元素"><a href="#添加或者删除指定位置的元素" class="headerlink" title="添加或者删除指定位置的元素"></a>添加或者删除指定位置的元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除指定位置的几个元素</span></span><br><span class="line">numbers.splice(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,4,5,6,7,8,9,10,11,12,13</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的代码会删除索引为5, 6, 7位置的元素.</p>
+<p>第一个参数表示索引起始的位置为5(其实是第6个元素, 因为索引从0开始的), 删除3个元素.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入指定位置元素</span></span><br><span class="line">numbers.splice(<span class="number">5</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,3,2,1,4,5,6,7,8,9,10,11,12,13</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的代码会从索引5的位置开始修改数据, 修改多少个呢? 第二个参数来决定的.</p>
+<p>第一个参数依然是索引的位置为5(第六个位置)</p>
+<p>第二个参数是要将数组中多少个元素给替换掉, 后面跟着的就是要替换的元素.</p>
+<h2 id="数组的合并"><a href="#数组的合并" class="headerlink" title="数组的合并"></a>数组的合并</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用concat(也可以直接+进行合并)</span></span><br><span class="line"><span class="comment">// 数组的合并</span></span><br><span class="line"><span class="keyword">var</span> nums1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">var</span> nums2 = [<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>]</span><br><span class="line"><span class="keyword">var</span> newNums = nums1.concat(nums2)</span><br><span class="line">alert(newNums) <span class="comment">// 1,2,3,100,200,300</span></span><br><span class="line"></span><br><span class="line">newNums = nums1 + nums2</span><br><span class="line">alert(newNums) <span class="comment">// 1,2,3,100,200,300</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h2><h3 id="every-方法"><a href="#every-方法" class="headerlink" title="every()方法"></a>every()方法</h3><p>every()方法是将数组中每一个元素传入到一个函数中, 该函数返回true/false.</p>
+<p>如果函数中每一个元素都返回true, 那么结果为true, 有一个为false, 那么结果为false</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义数组</span></span><br><span class="line"><span class="keyword">var</span> names = [<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;cb&quot;</span>, <span class="string">&quot;mba&quot;</span>, <span class="string">&quot;dna&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断数组的元素是否都包含a字符</span></span><br><span class="line"><span class="keyword">var</span> flag = names.every(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> t.indexOf(<span class="string">&#x27;a&#x27;</span>) != -<span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line">alert(flag)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="some-方法"><a href="#some-方法" class="headerlink" title="some()方法"></a>some()方法</h3><p>some()方法是将数组中每一个元素传入到一个函数中, 该函数返回true/false</p>
+<p>但是和every不同的是, 一旦有一次函数返回了true, 那么迭代就会结束. 并且结果为true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义数组</span></span><br><span class="line"><span class="keyword">var</span> names = [<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;cb&quot;</span>, <span class="string">&quot;mba&quot;</span>, <span class="string">&quot;dna&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断数组中是否包含有a字符的字符</span></span><br><span class="line"><span class="keyword">var</span> flag = names.some(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    alert(t)</span><br><span class="line">    <span class="keyword">return</span> t.indexOf(<span class="string">&quot;a&quot;</span>) != -<span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line">alert(flag)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="forEach-方法"><a href="#forEach-方法" class="headerlink" title="forEach()方法"></a>forEach()方法</h3><p>forEach()方法仅仅是一种快速迭代数组的方式而已.</p>
+<p>该方法不需要返回值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义数组</span></span><br><span class="line"><span class="keyword">var</span> names = [<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;cb&quot;</span>, <span class="string">&quot;mba&quot;</span>, <span class="string">&quot;dna&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// forEach的使用</span></span><br><span class="line">names.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    alert(t)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="filter-方法"><a href="#filter-方法" class="headerlink" title="filter()方法"></a>filter()方法</h3><p>filter()方法是一种过滤的函数</p>
+<p>首先会遍历数组中每一个元素传入到函数中</p>
+<p>函数的结果返回true, 那么这个元素会被添加到最新的数组中, 返回false, 则忽略该元素.</p>
+<p>最终会形成一个新的数组, 该数组就是filter()方法的返回值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义数组</span></span><br><span class="line"><span class="keyword">var</span> names = [<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;cb&quot;</span>, <span class="string">&quot;mba&quot;</span>, <span class="string">&quot;dna&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取names中所有包含&#x27;a&#x27;字符的元素</span></span><br><span class="line"><span class="keyword">var</span> newNames = names.filter(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> t.indexOf(<span class="string">&quot;a&quot;</span>) != -<span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line">alert(newNames)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="map-方法"><a href="#map-方法" class="headerlink" title="map()方法"></a>map()方法</h3><p>map()方法提供的是一种映射函数.</p>
+<p>首先会遍历数组中每一个元素传入到函数中.</p>
+<p>元素会经过函数中的指令进行各种变换, 生成新的元素, 并且将新的元素返回.</p>
+<p>最终会将返回的所有元素形成一个新的数组, 该数组就是map()方法的返回值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义数组</span></span><br><span class="line"><span class="keyword">var</span> names = [<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;cb&quot;</span>, <span class="string">&quot;mba&quot;</span>, <span class="string">&quot;dna&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在names中所有的元素后面拼接-abc</span></span><br><span class="line"><span class="keyword">var</span> newNames = names.map(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> t + <span class="string">&quot;-abc&quot;</span></span><br><span class="line">&#125;)</span><br><span class="line">alert(newNames)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="reduce-方法"><a href="#reduce-方法" class="headerlink" title="reduce()方法"></a>reduce()方法</h3><p>累加函数</p>
+<p>参数</p>
+<p>callback（一个在数组中每一项上调用的函数，接受四个函数：）</p>
+<p>previousValue（上一次调用回调函数时的返回值，或者初始值）</p>
+<p>currentValue（当前正在处理的数组元素）</p>
+<p>currentIndex（当前正在处理的数组元素下标）</p>
+<p>array（调用reduce()方法的数组）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用reduce方法</span></span><br><span class="line"><span class="keyword">var</span> total = numbers.reduce(<span class="function"><span class="keyword">function</span> (<span class="params">pre, cur</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> pre + cur</span><br><span class="line">&#125;)</span><br><span class="line">alert(total)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="将数组转换为字符串"><a href="#将数组转换为字符串" class="headerlink" title="将数组转换为字符串"></a>将数组转换为字符串</h2><p>Array.toString()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">   <span class="keyword">let</span> str = arr.toString()</span><br><span class="line">   <span class="built_in">console</span>.log(str)<span class="comment">// 1,2,3,4,5</span></span><br></pre></td></tr></table></figure>
+
+<p>Array.join()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">   <span class="keyword">let</span> str1 = arr.join()</span><br><span class="line">   <span class="keyword">let</span> str2 = arr.join(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">   <span class="keyword">let</span> str3 = arr.join(<span class="string">&#x27;##&#x27;</span>)</span><br><span class="line">   <span class="built_in">console</span>.log(str1)<span class="comment">// 12345</span></span><br><span class="line">   <span class="built_in">console</span>.log(str2)<span class="comment">// 1,2,3,4,5</span></span><br><span class="line">   <span class="built_in">console</span>.log(str3)<span class="comment">// 1##2##3##4##5</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/27/javaScript%E5%85%A8%E5%B1%80%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/27/javaScript%E5%85%A8%E5%B1%80%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" class="post-title-link" itemprop="url">js的全局代码执行过程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-27 21:36:50" itemprop="dateCreated datePublished" datetime="2021-06-27T21:36:50+08:00">2021-06-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-09 20:36:17" itemprop="dateModified" datetime="2021-10-09T20:36:17+08:00">2021-10-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">js复习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="javaScript全局代码执行过程"><a href="#javaScript全局代码执行过程" class="headerlink" title="javaScript全局代码执行过程"></a>javaScript全局代码执行过程</h1><h2 id="初始化全局对象"><a href="#初始化全局对象" class="headerlink" title="初始化全局对象"></a>初始化全局对象</h2><p>js引擎会在执行代码之前，会在堆内存中创建一个全局对象：Global Object（GO） </p>
+<p>该对象 所有的作用域（scope）都可以访问； </p>
+<p>里面会包含Date、Array、String、Number、setTimeout、setInterval等等；</p>
+<p>其中还有一个window属性指向自己；</p>
+<h2 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h2><p>js引擎内部有一个<strong>执行上下文栈（Execution Context Stack，简称ECS）</strong>，它是用于执行<strong>代码的调用栈</strong>。 </p>
+<p>那么现在它要执行谁呢？执行的是<strong>全局的代码块</strong>： </p>
+<p>全局的代码块为了执行会构建一个 <strong>Global Execution Context（GEC）</strong>； </p>
+<p>GEC会 被放入到ECS中 执行；</p>
+<p><strong>GEC被放入到ECS中里面包含两部分内容：</strong></p>
+<p><strong>第一部分：</strong>在代码执行前，在parser转成AST的过程中，会将全局定义的变量、函数等加入到GlobalObject中，</p>
+<p>但是并不会赋值； </p>
+<p>这个过程也称之为变量的作用域提升（hoisting） </p>
+<p><strong>第二部分：</strong>在代码执行中，对变量赋值，或者执行其他的函数；</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/27/javaScript%E5%85%A8%E5%B1%80%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/26/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,7 +431,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-30 00:23:18" itemprop="dateModified" datetime="2021-09-30T00:23:18+08:00">2021-09-30</time>
+                <time title="修改时间：2021-10-09 15:56:27" itemprop="dateModified" datetime="2021-10-09T15:56:27+08:00">2021-10-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -201,7 +439,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/h3c3/" itemprop="url" rel="index"><span itemprop="name">h3c3</span></a>
+                  <a href="/categories/h5c3/" itemprop="url" rel="index"><span itemprop="name">h5c3</span></a>
                 </span>
             </span>
 
@@ -289,7 +527,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-30 00:23:11" itemprop="dateModified" datetime="2021-09-30T00:23:11+08:00">2021-09-30</time>
+                <time title="修改时间：2021-10-06 18:07:36" itemprop="dateModified" datetime="2021-10-06T18:07:36+08:00">2021-10-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -474,7 +712,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-30 00:22:53" itemprop="dateModified" datetime="2021-09-30T00:22:53+08:00">2021-09-30</time>
+                <time title="修改时间：2021-10-06 18:10:17" itemprop="dateModified" datetime="2021-10-06T18:10:17+08:00">2021-10-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -570,7 +808,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-30 00:22:59" itemprop="dateModified" datetime="2021-09-30T00:22:59+08:00">2021-09-30</time>
+                <time title="修改时间：2021-10-06 18:10:14" itemprop="dateModified" datetime="2021-10-06T18:10:14+08:00">2021-10-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -578,7 +816,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                  <a href="/categories/js%E9%AB%98%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">js高级</span></a>
                 </span>
             </span>
 
@@ -613,6 +851,94 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/06/26/JavaScript_ES6/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/27/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/27/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">内存管理(泄漏)以及垃圾回收</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-27 20:36:29" itemprop="dateCreated datePublished" datetime="2020-08-27T20:36:29+08:00">2020-08-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-09 20:35:53" itemprop="dateModified" datetime="2021-10-09T20:35:53+08:00">2021-10-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">js复习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h2 id="JS的内存管理"><a href="#JS的内存管理" class="headerlink" title="JS的内存管理"></a>JS的内存管理</h2><p>JavaScript会在<strong>定义变量时</strong>为我们分配内存。 </p>
+<p>但是内存分配方式是一样的吗？</p>
+<p>JS对于基本数据类型内存的分配会在执行时，直接在栈空间进行分配；</p>
+<p>JS对于复杂数据类型内存的分配会在堆内存中开辟一块空间，并且将这块空间的指针返</p>
+<p>回值变量引用；</p>
+<h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><p>JavaScript代码运行时，需要分配内存空间来储存变量和值。当变量不在参与运行时，就需要系统收回被占用的内存空间，这就是垃圾回收。</p>
+<p> 回收机制： Javascript 具有自动垃圾回收机制，会定期对那些不再使用的变量、对象所占用的内存进行释放，原理就是找到不再使用的变量，然后释放掉其占用的内存。 JavaScript中存在两种变量：局部变量和全局变量。全局变量的生命周期会持续要页面卸载；而局部变量声明在函数中，它的生命周期从函数执行开始，直到函数执行 结束，在这个过程中，局部变量会在堆或栈中存储它们的值，当函数执行结束后，这些局部变量不再被使用，它们所占有的空间就会被释放。</p>
+<p>不过，当局部变量被外部函数使用时，其中一种情况就是闭包，在函数执行结束后，函数外部的变量依然指向函数内部的局部变量，此时局部变量依然在被使用，所 以不会回收。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/27/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -784,19 +1110,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -828,7 +1156,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">zhige</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
         
