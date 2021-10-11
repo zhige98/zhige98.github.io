@@ -20,20 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1.安装git 官网 https:&#x2F;&#x2F;git-scm.com&#x2F;download&#x2F;win  或者 https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;git-for-windows&#x2F;（第一个速度太慢，第二个找到最新的版本，安装很快）     用git –version验证版本号 2.安装Node.js 官网 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F; 或者 https:">
+  <meta name="description" content="闭包闭包是什么所以我认为闭包包括两部分，一是闭包函数，二是自由变量 函数function，如果可以访问外层作用域的自由变量，那个这个函数和自由变量就形成一个闭包 闭包的作用闭包的第一个用途是使我们在函数外部能够访问到函数内部的变量。通过使用闭包，可以通过在外部调用闭包函数，从而在外部访问到函数内部的变量，可以使用这 种方法来创建私有变量。  闭包的另一个用途是使已经运行结束的函数上下文中的变量对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建个人博客的步骤">
-<meta property="og:url" content="http://example.com/2020/06/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/index.html">
+<meta property="og:title" content="闭包">
+<meta property="og:url" content="http://example.com/2021/07/27/%E9%97%AD%E5%8C%85/index.html">
 <meta property="og:site_name" content="webStudy">
-<meta property="og:description" content="1.安装git 官网 https:&#x2F;&#x2F;git-scm.com&#x2F;download&#x2F;win  或者 https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;git-for-windows&#x2F;（第一个速度太慢，第二个找到最新的版本，安装很快）     用git –version验证版本号 2.安装Node.js 官网 https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F; 或者 https:">
+<meta property="og:description" content="闭包闭包是什么所以我认为闭包包括两部分，一是闭包函数，二是自由变量 函数function，如果可以访问外层作用域的自由变量，那个这个函数和自由变量就形成一个闭包 闭包的作用闭包的第一个用途是使我们在函数外部能够访问到函数内部的变量。通过使用闭包，可以通过在外部调用闭包函数，从而在外部访问到函数内部的变量，可以使用这 种方法来创建私有变量。  闭包的另一个用途是使已经运行结束的函数上下文中的变量对象">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-27T04:36:29.000Z">
-<meta property="article:modified_time" content="2021-10-06T09:21:29.525Z">
+<meta property="og:image" content="c:/Users/黄千智/Desktop/JS/Snipaste_2021-10-10_10-00-20.png">
+<meta property="article:published_time" content="2021-07-27T10:36:29.000Z">
+<meta property="article:modified_time" content="2021-10-10T09:41:44.157Z">
 <meta property="article:author" content="zhige">
-<meta property="article:tag" content="博客搭建，博客">
+<meta property="article:tag" content="js复习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/黄千智/Desktop/JS/Snipaste_2021-10-10_10-00-20.png">
 
-<link rel="canonical" href="http://example.com/2020/06/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/">
+<link rel="canonical" href="http://example.com/2021/07/27/%E9%97%AD%E5%8C%85/">
 
 
 <script id="page-configurations">
@@ -46,7 +48,7 @@
   };
 </script>
 
-  <title>搭建个人博客的步骤 | webStudy</title>
+  <title>闭包 | webStudy</title>
   
 
 
@@ -166,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/06/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/27/%E9%97%AD%E5%8C%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -179,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          搭建个人博客的步骤
+          闭包
         </h1>
 
         <div class="post-meta">
@@ -189,14 +191,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-06-27 12:36:29" itemprop="dateCreated datePublished" datetime="2020-06-27T12:36:29+08:00">2020-06-27</time>
+              <time title="创建时间：2021-07-27 18:36:29" itemprop="dateCreated datePublished" datetime="2021-07-27T18:36:29+08:00">2021-07-27</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-06 17:21:29" itemprop="dateModified" datetime="2021-10-06T17:21:29+08:00">2021-10-06</time>
+                <time title="修改时间：2021-10-10 17:41:44" itemprop="dateModified" datetime="2021-10-10T17:41:44+08:00">2021-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -204,7 +206,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">个人博客</span></a>
+                  <a href="/categories/js%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">js复习</span></a>
                 </span>
             </span>
 
@@ -219,18 +221,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>1.安装git 官网 <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>  或者 <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/%EF%BC%88%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%EF%BC%8C%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%89%BE%E5%88%B0%E6%9C%80%E6%96%B0%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E5%AE%89%E8%A3%85%E5%BE%88%E5%BF%AB%EF%BC%89">https://npm.taobao.org/mirrors/git-for-windows/（第一个速度太慢，第二个找到最新的版本，安装很快）</a>     用git –version验证版本号</p>
-<p>2.安装Node.js 官网 <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a> 或者 <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node">https://npm.taobao.org/mirrors/node</a> 用node–version验证版本号 npm –version</p>
-<p>3.npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>    #安装淘宝的cnpm 管理器<br>cnpm -v    #查看cnpm版本</p>
-<p>4.cnpm install -g hexo-cli #安装hexo框架      hexo -v    #查看hexo版本</p>
-<p>—完成以上步骤就可以正式来搭建hexo博客了</p>
-<p>5.windows 输入 mkdir C:\blog   看你要放在哪一个盘符，这样就创建了一个blog目录</p>
+        <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="闭包是什么"><a href="#闭包是什么" class="headerlink" title="闭包是什么"></a>闭包是什么</h2><p>所以我认为闭包包括两部分，一是闭包函数，二是自由变量</p>
+<p>函数function，如果可以访问外层作用域的自由变量，那个这个函数和自由变量就形成一个闭包</p>
+<h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><p>闭包的第一个用途是使我们在函数外部能够访问到函数内部的变量。通过使用闭包，可以通过在外部调用闭包函数，从而在外部访问到函数内部的变量，可以使用这 种方法来创建私有变量。</p>
+<p> 闭包的另一个用途是使已经运行结束的函数上下文中的变量对象继续留在内存中，因为闭包函数保留了这个变量对象的引用，所以这个变量对象不会被回收。</p>
+<h2 id="完整的执行过程"><a href="#完整的执行过程" class="headerlink" title="完整的执行过程"></a>完整的执行过程</h2><p>假如以下一段代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> message = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(message);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> bar;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> fn = foo();</span><br><span class="line">  fn();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:\Users\黄千智\Desktop\JS\Snipaste_2021-10-10_10-00-20.png"></p>
+<p>如上到foo函数执行完成a后会销毁函数执行上下文，把0xb00返回给fn，执行fn的时候会再创建一个fn的函数执行上下文，这时因为bar是依赖AO对象(foo)的，所以在执行完成后AO对象(foo)不会被销毁，因为不知道什么时候会fn会再被调用，所以如果fn没用了，而没有去释放AO对象(foo),这时候就会造成内存泄漏，方法就是不用fn的时候 fn=null，这时候GO对象不再指向foo函数执行体，也就意味这根元素不指向对象后会被回收</p>
 <span id="more"></span>
 
-<p>6.hexo init #生成博客 初始化博客<br>   hexo s    #启动本地博客服务<br>   <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>    #本地访问地址<br>   hexo n “我的第一篇文章” #创建新的文章<br>#返回blog目录<br>hexo clean #清理<br>hexo g #生成<br>#Github创建一个新的仓库 YourGithubName.github.io<br>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件<br>-—<br>#配置_config.yml<br>-—-<br># Deployment<br>## Docs: <a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">https://hexo.io/docs/deployment.html</a><br>deploy:<br>type: git<br>repo: <a target="_blank" rel="noopener" href="https://github.com/YourGithubName/YourGithubName.github.io.git">https://github.com/YourGithubName/YourGithubName.github.io.git</a><br>branch: master<br>-—-<br>hexo d    #部署到Github仓库里<br><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a> #访问这个地址可以查看博客</p>
-<p>git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia #下载yilia主题到本地</p>
-<p>#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
-<p>hexo c    #清理一下<br>hexo g    #生成<br>hexo d    #部署到远程Github仓库<br><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a> #查看博客</p>
+<h2 id="闭包泄露案例"><a href="#闭包泄露案例" class="headerlink" title="闭包泄露案例"></a>闭包泄露案例</h2><p>AO-&gt;arrayFns[]数组里保存这返回的100个函数的地址-&gt;每个函数指向AO中的arr-&gt;arr指向了数组</p>
+<p>这就意味着如果不释放arrayFns就会消耗大概400M的内存</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">createFnArrat</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1024</span> * <span class="number">1024</span>).fill(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(arr.length);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> arrayFns = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">    arrayFns.push(createFnArrat());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    arrayFns = <span class="literal">null</span>;</span><br><span class="line">  &#125;, <span class="number">2000</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -240,7 +247,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%8C%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客搭建，博客</a>
+              <a href="/tags/js%E5%A4%8D%E4%B9%A0/" rel="tag"># js复习</a>
           </div>
 
         
@@ -248,10 +255,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/08/05/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" rel="next" title="内存管理(泄漏)以及垃圾回收">
-      内存管理(泄漏)以及垃圾回收 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/06/27/javaScript%E5%85%A8%E5%B1%80%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" rel="prev" title="js的全局代码执行过程">
+      <i class="fa fa-chevron-left"></i> js的全局代码执行过程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/29/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/" rel="next" title="js数组方法">
+      js数组方法 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -311,6 +321,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AD%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text">闭包是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">闭包的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">完整的执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AD%E5%8C%85%E6%B3%84%E9%9C%B2%E6%A1%88%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">闭包泄露案例</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
