@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/06/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/29/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,7 +176,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" class="post-title-link" itemprop="url">搭建个人博客的步骤</a>
+            <a href="/2021/07/29/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">js数组方法</a>
         </h2>
 
         <div class="post-meta">
@@ -186,14 +186,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-06-27 12:36:29" itemprop="dateCreated datePublished" datetime="2020-06-27T12:36:29+08:00">2020-06-27</time>
+              <time title="创建时间：2021-07-29 15:36:29" itemprop="dateCreated datePublished" datetime="2021-07-29T15:36:29+08:00">2021-07-29</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-06 17:21:29" itemprop="dateModified" datetime="2021-10-06T17:21:29+08:00">2021-10-06</time>
+                <time title="修改时间：2021-10-27 23:32:56" itemprop="dateModified" datetime="2021-10-27T23:32:56+08:00">2021-10-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -201,7 +201,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">个人博客</span></a>
+                  <a href="/categories/js%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">js复习</span></a>
                 </span>
             </span>
 
@@ -216,15 +216,589 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>1.安装git 官网 <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>  或者 <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/%EF%BC%88%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%80%9F%E5%BA%A6%E5%A4%AA%E6%85%A2%EF%BC%8C%E7%AC%AC%E4%BA%8C%E4%B8%AA%E6%89%BE%E5%88%B0%E6%9C%80%E6%96%B0%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%8C%E5%AE%89%E8%A3%85%E5%BE%88%E5%BF%AB%EF%BC%89">https://npm.taobao.org/mirrors/git-for-windows/（第一个速度太慢，第二个找到最新的版本，安装很快）</a>     用git –version验证版本号</p>
-<p>2.安装Node.js 官网 <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a> 或者 <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node">https://npm.taobao.org/mirrors/node</a> 用node–version验证版本号 npm –version</p>
-<p>3.npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>    #安装淘宝的cnpm 管理器<br>cnpm -v    #查看cnpm版本</p>
-<p>4.cnpm install -g hexo-cli #安装hexo框架      hexo -v    #查看hexo版本</p>
-<p>—完成以上步骤就可以正式来搭建hexo博客了</p>
-<p>5.windows 输入 mkdir C:\blog   看你要放在哪一个盘符，这样就创建了一个blog目录</p>
+          <h1 id="数组常用方法"><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h1><h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加一个元素到数组的最后位置</span></span><br><span class="line"><span class="comment">// 方式一:</span></span><br><span class="line"><span class="keyword">var</span> numbers = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">numbers[numbers.length] = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式二:</span></span><br><span class="line">numbers.push(<span class="number">11</span>)</span><br><span class="line">numbers.push(<span class="number">12</span>, <span class="number">13</span>)</span><br><span class="line"></span><br><span class="line">alert(numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加一个元素到数组首位</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = numbers.length; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">    numbers[i] = numbers[i-<span class="number">1</span>]</span><br><span class="line">&#125;</span><br><span class="line">numbers[<span class="number">0</span>] = -<span class="number">1</span></span><br><span class="line">alert(numbers) <span class="comment">// -1,0,1,2,3,4,5,6,7,8,9,10,11,12,13</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过unshift在首位插入数据</span></span><br><span class="line">numbers.unshift(-<span class="number">2</span>)</span><br><span class="line">numbers.unshift(-<span class="number">4</span>, -<span class="number">3</span>)</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除最后的元素</span></span><br><span class="line">numbers.pop()</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除首位的元素</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; numbers.length; i++) &#123;</span><br><span class="line">    numbers[i] = numbers[i+<span class="number">1</span>]</span><br><span class="line">&#125;</span><br><span class="line">numbers.pop()</span><br><span class="line">alert(numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment">//shift方法</span></span><br><span class="line">numbers.shift()</span><br><span class="line">alert(numbers)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="添加或者删除指定位置的元素"><a href="#添加或者删除指定位置的元素" class="headerlink" title="添加或者删除指定位置的元素"></a>添加或者删除指定位置的元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除指定位置的几个元素</span></span><br><span class="line">numbers.splice(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,4,5,6,7,8,9,10,11,12,13</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的代码会删除索引为5, 6, 7位置的元素.</p>
+<p>第一个参数表示索引起始的位置为5(其实是第6个元素, 因为索引从0开始的), 删除3个元素.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入指定位置元素</span></span><br><span class="line">numbers.splice(<span class="number">5</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">alert(numbers) <span class="comment">// -4,-3,-2,-1,0,3,2,1,4,5,6,7,8,9,10,11,12,13</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的代码会从索引5的位置开始修改数据, 修改多少个呢? 第二个参数来决定的.</p>
+<p>第一个参数依然是索引的位置为5(第六个位置)</p>
+<p>第二个参数是要将数组中多少个元素给替换掉, 后面跟着的就是要替换的元素.</p>
+<h2 id="数组的合并"><a href="#数组的合并" class="headerlink" title="数组的合并"></a>数组的合并</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用concat(也可以直接+进行合并)</span></span><br><span class="line"><span class="comment">// 数组的合并</span></span><br><span class="line"><span class="keyword">var</span> nums1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">var</span> nums2 = [<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>]</span><br><span class="line"><span class="keyword">var</span> newNums = nums1.concat(nums2)</span><br><span class="line">alert(newNums) <span class="comment">// 1,2,3,100,200,300</span></span><br><span class="line"></span><br><span class="line">newNums = nums1 + nums2</span><br><span class="line">alert(newNums) <span class="comment">// 1,2,3,100,200,300</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/06/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/#more" rel="contents">
+              <a class="btn" href="/2021/07/29/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/27/%E9%97%AD%E5%8C%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/27/%E9%97%AD%E5%8C%85/" class="post-title-link" itemprop="url">闭包</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-27 18:36:29" itemprop="dateCreated datePublished" datetime="2021-07-27T18:36:29+08:00">2021-07-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-10 17:41:44" itemprop="dateModified" datetime="2021-10-10T17:41:44+08:00">2021-10-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">js复习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="闭包是什么"><a href="#闭包是什么" class="headerlink" title="闭包是什么"></a>闭包是什么</h2><p>所以我认为闭包包括两部分，一是闭包函数，二是自由变量</p>
+<p>函数function，如果可以访问外层作用域的自由变量，那个这个函数和自由变量就形成一个闭包</p>
+<h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><p>闭包的第一个用途是使我们在函数外部能够访问到函数内部的变量。通过使用闭包，可以通过在外部调用闭包函数，从而在外部访问到函数内部的变量，可以使用这 种方法来创建私有变量。</p>
+<p> 闭包的另一个用途是使已经运行结束的函数上下文中的变量对象继续留在内存中，因为闭包函数保留了这个变量对象的引用，所以这个变量对象不会被回收。</p>
+<h2 id="完整的执行过程"><a href="#完整的执行过程" class="headerlink" title="完整的执行过程"></a>完整的执行过程</h2><p>假如以下一段代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> message = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(message);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> bar;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> fn = foo();</span><br><span class="line">  fn();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:\Users\黄千智\Desktop\JS\Snipaste_2021-10-10_10-00-20.png"></p>
+<p>如上到foo函数执行完成a后会销毁函数执行上下文，把0xb00返回给fn，执行fn的时候会再创建一个fn的函数执行上下文，这时因为bar是依赖AO对象(foo)的，所以在执行完成后AO对象(foo)不会被销毁，因为不知道什么时候会fn会再被调用，所以如果fn没用了，而没有去释放AO对象(foo),这时候就会造成内存泄漏，方法就是不用fn的时候 fn=null，这时候GO对象不再指向foo函数执行体，也就意味这根元素不指向对象后会被回收</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/07/27/%E9%97%AD%E5%8C%85/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/27/javaScript%E5%85%A8%E5%B1%80%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/27/javaScript%E5%85%A8%E5%B1%80%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" class="post-title-link" itemprop="url">js的全局代码执行过程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-27 21:36:50" itemprop="dateCreated datePublished" datetime="2021-06-27T21:36:50+08:00">2021-06-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-09 20:36:17" itemprop="dateModified" datetime="2021-10-09T20:36:17+08:00">2021-10-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">js复习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="javaScript全局代码执行过程"><a href="#javaScript全局代码执行过程" class="headerlink" title="javaScript全局代码执行过程"></a>javaScript全局代码执行过程</h1><h2 id="初始化全局对象"><a href="#初始化全局对象" class="headerlink" title="初始化全局对象"></a>初始化全局对象</h2><p>js引擎会在执行代码之前，会在堆内存中创建一个全局对象：Global Object（GO） </p>
+<p>该对象 所有的作用域（scope）都可以访问； </p>
+<p>里面会包含Date、Array、String、Number、setTimeout、setInterval等等；</p>
+<p>其中还有一个window属性指向自己；</p>
+<h2 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h2><p>js引擎内部有一个<strong>执行上下文栈（Execution Context Stack，简称ECS）</strong>，它是用于执行<strong>代码的调用栈</strong>。 </p>
+<p>那么现在它要执行谁呢？执行的是<strong>全局的代码块</strong>： </p>
+<p>全局的代码块为了执行会构建一个 <strong>Global Execution Context（GEC）</strong>； </p>
+<p>GEC会 被放入到ECS中 执行；</p>
+<p><strong>GEC被放入到ECS中里面包含两部分内容：</strong></p>
+<p><strong>第一部分：</strong>在代码执行前，在parser转成AST的过程中，会将全局定义的变量、函数等加入到GlobalObject中，</p>
+<p>但是并不会赋值； </p>
+<p>这个过程也称之为变量的作用域提升（hoisting） </p>
+<p><strong>第二部分：</strong>在代码执行中，对变量赋值，或者执行其他的函数；</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/27/javaScript%E5%85%A8%E5%B1%80%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/26/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/26/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">移动端布局</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-26 09:03:22" itemprop="dateCreated datePublished" datetime="2021-06-26T09:03:22+08:00">2021-06-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-09 15:56:27" itemprop="dateModified" datetime="2021-10-09T15:56:27+08:00">2021-10-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/h5c3/" itemprop="url" rel="index"><span itemprop="name">h5c3</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="了解移动web开发现状"><a href="#了解移动web开发现状" class="headerlink" title="了解移动web开发现状"></a>了解移动web开发现状</h1><p>移动端浏览器主要针对webkit内核做兼容 </p>
+<p>现在碎片化严重，手机分辨率和大小不一 </p>
+<p>学会用谷歌浏览器调试手机端</p>
+<h2 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h2><p>视口分为布局视口、视觉视口、理想视口</p>
+<p>视觉视口：用户正在看到的网站的区域 </p>
+<p> 理想视口 ：理想视口，对设备来讲，是最理想的视口 尺寸（想要的）</p>
+<p>布局视口 ：一般手机浏览器都默认设置了一个布局 视口，用于解决早期的PC端页面在手机上显示的问题</p>
+<h2 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h2><p>    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"></p>
+<p>通过meta但标签来对视口进行设置 </p>
+<p>Width属性，用来设置视口的宽度 </p>
+<p>initial-scale 初识缩放比 </p>
+<p>maximum-scale 最大缩放比 </p>
+<p>minimum-scale 最小缩放比 </p>
+<p>user-scalable 用户是否可以进行缩放</p>
+<h2 id="物理像素与物理像素比"><a href="#物理像素与物理像素比" class="headerlink" title="物理像素与物理像素比"></a>物理像素与物理像素比</h2><p>物理像素值得是屏幕显示的最小颗粒，pc端开发时1px等于1个物理像素，但移动端不同，例如iPhone8，1px等于2个物理像素，1px能显示的物理像素个数称为物理像素比，所以在iPhone8里物理像素比为2。</p>
+<p>早期pc端和手机屏幕物理像素比为1：1，由于视网膜屏技术的出现，将更多的物理像素点压缩到一块屏幕，提高了屏幕分辨率，就有了多倍物理像素。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/26/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/26/DOM%E9%87%8D%E7%82%B9%E6%A0%B8%E5%BF%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/26/DOM%E9%87%8D%E7%82%B9%E6%A0%B8%E5%BF%83/" class="post-title-link" itemprop="url">DOM重点核心</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-26 09:03:17" itemprop="dateCreated datePublished" datetime="2021-06-26T09:03:17+08:00">2021-06-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-06 18:07:36" itemprop="dateModified" datetime="2021-10-06T18:07:36+08:00">2021-10-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="注册事件的多种方式"><a href="#注册事件的多种方式" class="headerlink" title="注册事件的多种方式"></a>注册事件的多种方式</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;button&gt;传统注册事件&lt;/button&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>监听注册事件<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// 1.传统注册事件</span></span><br><span class="line">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">    btn[<span class="number">0</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">&#x27;aaa&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    btn[<span class="number">0</span>].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">&#x27;ddd&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.事件监听注册事件 addEventListener</span></span><br><span class="line">    <span class="comment">// (1).里面的事件类型是字符串 必定加引号 而且不带on</span></span><br><span class="line">    <span class="comment">// (2).同一个元素 同一个事件可以添加多个监听器（事件处理程序）</span></span><br><span class="line">    btn[<span class="number">1</span>].addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">&#x27;aaa&#x27;</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    btn[<span class="number">1</span>].addEventListener(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">&#x27;bbb&#x27;</span>);</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// // 3.attachEvent ie9以前的版本支持</span></span><br><span class="line">    <span class="comment">// btn[2].attachEvent(&#x27;onclick&#x27;,function()&#123;</span></span><br><span class="line">    <span class="comment">//     alert(&#x27;kkk&#x27;);</span></span><br><span class="line">    <span class="comment">// &#125;)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="DOM事件流冒泡阶段与捕获阶段代码验证"><a href="#DOM事件流冒泡阶段与捕获阶段代码验证" class="headerlink" title="DOM事件流冒泡阶段与捕获阶段代码验证"></a>DOM事件流冒泡阶段与捕获阶段代码验证</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;father&quot;</span> style=<span class="string">&quot;background-color: blue;&quot;</span>&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background-color: pink;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">//不写第三个参数 默认flase 处于冒泡阶段调用事件处理程序</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">//捕获阶段document-&gt;html-&gt;body-&gt;father-&gt;son</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">//js代码中只能执行捕获或者冒泡的其中一个阶段</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    </span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> div = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;div&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="built_in">console</span>.log(div);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    div[<span class="number">0</span>].addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        alert(<span class="string">&#x27;father&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,<span class="literal">true</span>)</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    div[<span class="number">1</span>].addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        alert(<span class="string">&#x27;son&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,<span class="literal">true</span>)</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">//冒泡阶段son-&gt;father-&gt;body-&gt;html-&gt;document</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// var div = document.querySelectorAll(&#x27;div&#x27;);</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// console.log(div);</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// div[0].addEventListener(&#x27;click&#x27;, function () &#123;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">//     alert(&#x27;father&#x27;);</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// &#125;,false)</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// div[1].addEventListener(&#x27;click&#x27;, function () &#123;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">//     alert(&#x27;son&#x27;);</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// &#125;,false)</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/26/DOM%E9%87%8D%E7%82%B9%E6%A0%B8%E5%BF%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/26/pc%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/26/pc%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/" class="post-title-link" itemprop="url">pc端网页特效</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-26 09:03:17" itemprop="dateCreated datePublished" datetime="2021-06-26T09:03:17+08:00">2021-06-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-30 00:22:44" itemprop="dateModified" datetime="2021-09-30T00:22:44+08:00">2021-09-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/h5c3/" itemprop="url" rel="index"><span itemprop="name">h5c3</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="元素偏移量offset系列"><a href="#元素偏移量offset系列" class="headerlink" title="元素偏移量offset系列"></a>元素偏移量offset系列</h1><h2 id="offset-与-style-区别"><a href="#offset-与-style-区别" class="headerlink" title="offset 与 style 区别"></a>offset 与 style 区别</h2><h3 id="offset"><a href="#offset" class="headerlink" title="offset"></a>offset</h3><ul>
+<li><p>offset 可以得到任意样式表中的样式值</p>
+</li>
+<li><p>offset 系列获得的数值是没有单位的</p>
+</li>
+<li><p>offsetWidth 包含padding+border+width</p>
+</li>
+<li><p>offsetWidth 等属性是只读属性，只能获取不能赋值</p>
+</li>
+<li><p>所以，我们想要获取元素大小位置，用offset更合适</p>
+</li>
+</ul>
+<h3 id="style"><a href="#style" class="headerlink" title="style"></a>style</h3><ul>
+<li>style 只能得到行内样式表中的样式值</li>
+<li>style.width 获得的是带有单位的字符串</li>
+<li>style.width 获得不包含padding和border 的值</li>
+<li>style.width 是可读写属性，可以获取也可以赋值</li>
+<li>所以，我们想要给元素更改值，则需要用style改变</li>
+</ul>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><h3 id="计算鼠标在盒子内的坐标"><a href="#计算鼠标在盒子内的坐标" class="headerlink" title="计算鼠标在盒子内的坐标"></a>计算鼠标在盒子内的坐标</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    div.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">var</span> x = e.pageX - <span class="built_in">this</span>.offsetLeft;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">var</span> y = e.pageY - <span class="built_in">this</span>.offsetTop;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        div.innerHTML = <span class="string">&#x27;x坐标是:&#x27;</span> + x + <span class="string">&#x27;y的坐标是&#x27;</span> + y;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;)</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/26/pc%E7%AB%AF%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/26/JavaScript_ES6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhige">
+      <meta itemprop="description" content="记录、分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="webStudy">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/26/JavaScript_ES6/" class="post-title-link" itemprop="url">ES6</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-26 09:03:13" itemprop="dateCreated datePublished" datetime="2021-06-26T09:03:13+08:00">2021-06-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-06 18:10:14" itemprop="dateModified" datetime="2021-10-06T18:10:14+08:00">2021-10-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js%E9%AB%98%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">js高级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h6 id="let变量声明"><a href="#let变量声明" class="headerlink" title="let变量声明"></a>let变量声明</h6><p>1.变量不能重复声明</p>
+<p>2.有块级作用域</p>
+<p>3.不存在变量提升</p>
+<p>4.不影响作用域链</p>
+<p>let的经典案例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">let</span> items = <span class="built_in">document</span>.querySelectorAll(<span class="string">&#x27;.items&#x27;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; items.length; i++) &#123;</span><br><span class="line">        items[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            items[i].style.background = <span class="string">&#x27;pink&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 用var时不能用items[i].style.background 因为i时全局变量 循环后i=3；</span></span><br><span class="line">    <span class="comment">// 而用let相当于开辟了一个块作用域，里面的每个let互不干扰 例如let i =0,let i =2 ;就执行了以下代码</span></span><br><span class="line">    <span class="comment">// &#123;</span></span><br><span class="line">    <span class="comment">//     let i = 0;</span></span><br><span class="line">    <span class="comment">//     items[i].onclick = function() &#123;</span></span><br><span class="line">    <span class="comment">//         items[i].style.background = &#x27;pink&#x27;;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">    <span class="comment">// &#123;</span></span><br><span class="line">    <span class="comment">//     let i = 1;</span></span><br><span class="line">    <span class="comment">//     items[i].onclick = function() &#123;</span></span><br><span class="line">    <span class="comment">//         items[i].style.background = &#x27;pink&#x27;;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="const常量声明"><a href="#const常量声明" class="headerlink" title="const常量声明"></a>const常量声明</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">const</span> SHOOL = <span class="string">&#x27;JUM&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1.一定要赋初始值</span></span><br><span class="line">    <span class="comment">// const A;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.一般常量使用大写(潜规则)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.常量的值不能修改</span></span><br><span class="line">    <span class="comment">// SCHOOL = &#x27;cy&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.块级作用域</span></span><br><span class="line">    <span class="comment">// &#123;</span></span><br><span class="line">    <span class="comment">//     const PLAYER = &#x27;UZI&#x27;;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">    <span class="comment">// console.log(PLATER);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5.对于数组和对象的修改，不算做对常量的修改，不会报错</span></span><br><span class="line">    <span class="keyword">const</span> TEAM = [<span class="string">&#x27;UZI&#x27;</span>, <span class="string">&#x27;MLXG&#x27;</span>, <span class="string">&#x27;MING&#x27;</span>];</span><br><span class="line">    TEAM.push(<span class="string">&#x27;Mekio&#x27;</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(TEAM);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h6 id="变量解构赋值"><a href="#变量解构赋值" class="headerlink" title="变量解构赋值"></a>变量解构赋值</h6><p>ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，称为解构赋值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// 1.数组的解构</span></span><br><span class="line">    <span class="keyword">const</span> F4 = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>];</span><br><span class="line">    <span class="keyword">let</span> [yi, er, san, si] = F4;</span><br><span class="line">    <span class="built_in">console</span>.log(yi);</span><br><span class="line">    <span class="built_in">console</span>.log(er);</span><br><span class="line">    <span class="built_in">console</span>.log(san);</span><br><span class="line">    <span class="built_in">console</span>.log(si);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.对象的解构</span></span><br><span class="line">    <span class="keyword">const</span> zimu = &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;E&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>: <span class="string">&#x27;F&#x27;</span>,</span><br><span class="line">        <span class="attr">G</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;XXXXX&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> &#123;</span><br><span class="line">        name,</span><br><span class="line">        age,</span><br><span class="line">        G</span><br><span class="line">    &#125; = zimu; <span class="comment">//对象解构赋值必须同名</span></span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">    <span class="built_in">console</span>.log(age);</span><br><span class="line">    <span class="built_in">console</span>.log(G);</span><br><span class="line">    G();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/26/JavaScript_ES6/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -313,7 +887,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

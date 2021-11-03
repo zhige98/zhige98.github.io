@@ -23,17 +23,17 @@
   <meta name="description" content="内存管理JS的内存管理JavaScript会在定义变量时为我们分配内存。  但是内存分配方式是一样的吗？ JS对于基本数据类型内存的分配会在执行时，直接在栈空间进行分配； JS对于复杂数据类型内存的分配会在堆内存中开辟一块空间，并且将这块空间的指针返 回值变量引用； 垃圾回收JavaScript代码运行时，需要分配内存空间来储存变量和值。当变量不在参与运行时，就需要系统收回被占用的内存空间，这就是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内存管理(泄漏)以及垃圾回收">
-<meta property="og:url" content="http://example.com/2020/08/05/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:url" content="http://example.com/2021/08/05/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="webStudy">
 <meta property="og:description" content="内存管理JS的内存管理JavaScript会在定义变量时为我们分配内存。  但是内存分配方式是一样的吗？ JS对于基本数据类型内存的分配会在执行时，直接在栈空间进行分配； JS对于复杂数据类型内存的分配会在堆内存中开辟一块空间，并且将这块空间的指针返 回值变量引用； 垃圾回收JavaScript代码运行时，需要分配内存空间来储存变量和值。当变量不在参与运行时，就需要系统收回被占用的内存空间，这就是">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-05T12:36:29.000Z">
-<meta property="article:modified_time" content="2021-10-10T06:55:35.169Z">
+<meta property="article:published_time" content="2021-08-05T12:36:29.000Z">
+<meta property="article:modified_time" content="2021-10-11T02:59:25.712Z">
 <meta property="article:author" content="zhige">
 <meta property="article:tag" content="js复习">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2020/08/05/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+<link rel="canonical" href="http://example.com/2021/08/05/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
 
 
 <script id="page-configurations">
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/05/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/05/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -189,14 +189,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-05 20:36:29" itemprop="dateCreated datePublished" datetime="2020-08-05T20:36:29+08:00">2020-08-05</time>
+              <time title="创建时间：2021-08-05 20:36:29" itemprop="dateCreated datePublished" datetime="2021-08-05T20:36:29+08:00">2021-08-05</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-10 14:55:35" itemprop="dateModified" datetime="2021-10-10T14:55:35+08:00">2021-10-10</time>
+                <time title="修改时间：2021-10-11 10:59:25" itemprop="dateModified" datetime="2021-10-11T10:59:25+08:00">2021-10-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,12 +252,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/27/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" rel="prev" title="搭建个人博客的步骤">
-      <i class="fa fa-chevron-left"></i> 搭建个人博客的步骤
+    <a href="/2021/07/29/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/" rel="prev" title="js数组方法">
+      <i class="fa fa-chevron-left"></i> js数组方法
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/06/26/JavaScript_ES6/" rel="next" title="ES6">
-      ES6 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/08/16/this%E7%9A%84%E7%90%86%E8%A7%A3%E4%BB%A5%E5%8F%8Ajs%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="next" title="this的理解以及this面试题">
+      this的理解以及this面试题 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -331,7 +331,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
